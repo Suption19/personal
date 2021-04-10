@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../widgets/navigationBar/nagivationBar.dart';
-import '../../widgets/centeredView/centeredView.dart';
+import 'package:personal/widgets/centeredView/centeredView.dart';
+import 'package:personal/widgets/navigationBar/nagivationBar.dart';
 
-class HomeView extends StatelessWidget {
+class CurriculumVitaeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
