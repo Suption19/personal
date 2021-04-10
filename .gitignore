@@ -98,7 +98,6 @@ lib/generated_plugin_registrant.dart
 .ionide
 
 ### vscode ###
-!.vscode/settings.json
 !.vscode/extensions.json
 
 ### Web ###

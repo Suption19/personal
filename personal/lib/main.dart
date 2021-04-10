@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:personal/utils/websiteRoutes.dart';
 import 'package:personal/views/home/homeView.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'package:personal/widgets/navigationBar/nagivationBar.dart';
+import 'package:personal/views/socialMedia/socialMediaView.dart';
+import 'views/aboutMe/aboutMeView.dart';
 
 void main() {
   setPathUrlStrategy();
@@ -9,22 +11,23 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final String homepageTitle = 'Maik Bernert';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Maik Bernert',
+      title: homepageTitle,
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme:
               Theme.of(context).textTheme.apply(fontFamily: 'Open Sans')),
       home: HomeView(),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: WebsiteRoutes.HomePage,
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/home': (context) => HomeView(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
-        '/second': (context) => SecondScreen(),
+        WebsiteRoutes.HomePage: (context) => HomeView(),
+        WebsiteRoutes.SocialMedia: (context) => SocialMediaView(),
+        WebsiteRoutes.AboutMe: (context) => AboutMeView(),
+        WebsiteRoutes.CurriculumVitae: (context) => SocialMediaView(),
       },
     );
   }
