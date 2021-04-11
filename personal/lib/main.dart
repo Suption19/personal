@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal/utils/websiteRoutes.dart';
+import 'package:personal/views/admin/adminView.dart';
 import 'package:personal/views/home/homeView.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:personal/views/socialMedia/socialMediaView.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         WebsiteRoutes.SocialMedia: (context) => SocialMediaView(),
         WebsiteRoutes.AboutMe: (context) => AboutMeView(),
         WebsiteRoutes.CurriculumVitae: (context) => CurriculumVitaeView(),
+        WebsiteRoutes.Admin: (context) => AdminView(),
       },
     );
   }
