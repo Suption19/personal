@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
               Theme.of(context).textTheme.apply(fontFamily: 'Open Sans')),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        /* dark theme settings */
       ),
       themeMode: ThemeMode.dark,
       home: HomeView(),
