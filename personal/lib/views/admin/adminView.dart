@@ -6,9 +6,10 @@ import 'package:http/http.dart' as http;
 class AdminView extends StatelessWidget {
   final usernameField = new CustomTextField("Enter Username");
   final passwordField = new CustomTextField("Enter Password");
+
   void tryToLogin() async {
-    var url = new Uri.http("localhost:4040", "/application/json");
-    var response = await http.get(url);
+    var url = new Uri.http("10.10.10.10:4040", "");
+    var response = await http.post(url);
     if (response.statusCode == 200) {
       print(response.statusCode);
     } else {
